@@ -1,4 +1,5 @@
 import win32com.client
+import pythoncom
 
 def aDouble(xyz):
     """
