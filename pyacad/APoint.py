@@ -34,17 +34,6 @@ class APoint:
 
     @x.setter
     def x(self, value):
-        """
-
-        Parameters
-        ----------
-        value :
-            
-
-        Returns
-        -------
-
-        """
         self._x = value
 
     @property
@@ -54,17 +43,6 @@ class APoint:
 
     @y.setter
     def y(self, value):
-        """
-
-        Parameters
-        ----------
-        value :
-            
-
-        Returns
-        -------
-
-        """
         self._y = value
 
     @property
@@ -74,17 +52,6 @@ class APoint:
 
     @z.setter
     def z(self, value):
-        """
-
-        Parameters
-        ----------
-        value :
-            
-
-        Returns
-        -------
-
-        """
         self._z = value
 
     def __call__(self):
@@ -147,12 +114,11 @@ class APoint:
         return APoint(op(p1[0], p2[0]), op(p1[1], p2[1]), op(p1[2], p2[2]))
 
     def distance_to(self, other):
-        """
+        """Returns distance betwen two points 'p1' and 'p2'
 
         Parameters
         ----------
-        other :
-            
+        other : APoint, the point at which the distance is calculated
 
         Returns
         -------
@@ -166,9 +132,9 @@ def distance(p1, p2):
 
     Parameters
     ----------
-    p1 :
+    p1 : APoint
         
-    p2 :
+    p2 : APoint
         
 
     Returns

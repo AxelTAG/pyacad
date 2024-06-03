@@ -17,7 +17,7 @@ from pyacad import Autocad, APoint
 acad = Autocad()
 p0 = APoint(1, 1)
 p1 = APoint(2, 3)
-acad.model.AddLine(p0, p1)
+acad.model.AddLine(p0(), p1())
 
 # Zoom the line by extents.
 acad.app.ZoomExtents()

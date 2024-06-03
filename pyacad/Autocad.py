@@ -5,8 +5,10 @@ import win32com.client
 class Autocad:
     """Main class of AutoCAD app."""
 
-    def __init__(self):
+    def __init__(self, create_if_not_exist: bool = True, visible: bool = True):
         self._app = None
+        self._create_if_not_exist = create_if_not_exist
+        self._visible = True
 
     @property
     def app(self):
@@ -14,7 +16,11 @@ class Autocad:
         try:
             self._app = win32com.client.GetActiveObject("AutoCAD.Application")
         except:
-            self._app = win32com.client.Dispatch("AutoCAD.Application")
+            if self._create_if_not_exist:
+                self._app = win32com.client.Dispatch("AutoCAD.Application")
+                self._app.Visible = self._visible
+            else:
+                return None
         return self._app
 
     @property
