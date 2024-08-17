@@ -3,7 +3,9 @@ import win32com.client
 
 
 class Autocad:
-    """Main class of AutoCAD app."""
+    """
+    Main class of AutoCAD app.
+    """
 
     def __init__(self, create_if_not_exist: bool = True, visible: bool = True):
         self._app = None
@@ -34,22 +36,19 @@ class Autocad:
         return self.doc.ModelSpace
 
     def iter_objects(self, block=None, filter_for=None, limit=None):
-        """Iters the objects in 'block'.
+        """
+        Iterate over the objects in a specified 'block'.
 
-        Parameters
-        ----------
-        block : win32com.client.CDispatch, None
-            COM object returned from AutoCAD application. If None is specified Active Layout is used.
-             (Default value = None)
-        filter_for : {list of str, tuple of str, None}
-             (Default value = None)
-        limit : {int, None}
-             (Default value = None)
-
-        Yield
-        -------
-        generator
-            Generator of objects in layout specified (default Active Layout).
+        :param block: COM object returned from the AutoCAD application. If `None` is specified,
+                      the active layout is used.
+        :type block: win32com.client.CDispatch, None
+        :param filter_for: A filter for specific object types. Can be a list or tuple of strings.
+                           If `None`, no filtering is applied.
+        :type filter_for: list of str, tuple of str, None
+        :param limit: The maximum number of objects to iterate over. If `None`, no limit is applied.
+        :type limit: int, None
+        :yield: Generator of objects in the specified layout or active layout if none is specified.
+        :rtype: generator
         """
         if block is None:
             block = self.doc.ActiveLayout.Block
@@ -64,21 +63,16 @@ class Autocad:
                 yield block.Item(n)
 
     def iter_layouts(self, document=None, skip_model=False):
-        """Iters layouts from the document passed.
+        """
+        Iterate over the layouts in the specified document.
 
-        Parameters
-        ----------
-        document : win32com.client.CDispatch, None
-            COM object returned from AutoCAD application. If None is specified Active Document is used.
-             (Default value = None)
-        skip_model : bool
-             (Default value = False)
-
-        Yield
-        -------
-        generator
-            Generator of layouts in document passed.
-
+        :param document: COM object returned from the AutoCAD application. If `None` is specified,
+                         the active document is used.
+        :type document: win32com.client.CDispatch, None
+        :param skip_model: Whether to skip the model layout. Defaults to `False`.
+        :type skip_model: bool
+        :yield: Generator of layouts in the specified document.
+        :rtype: generator
         """
         if not document:
             document = self.doc
@@ -88,18 +82,14 @@ class Autocad:
             yield layout
 
     def iter_layers(self, document=None):
-        """Iters layers from the document passed.
+        """
+        Iterate over the layers in the specified document.
 
-        Parameters
-        ----------
-        document : win32com.client.CDispatch, None
-            COM object returned from AutoCAD application. If None is specified Active Document is used.
-             (Default value = None)
-
-        Yield
-        -------
-        generator
-            Generator of layers in document passed.
+        :param document: COM object returned from the AutoCAD application. If `None` is specified,
+                         the active document is used.
+        :type document: win32com.client.CDispatch, None
+        :yield: Generator of layers in the specified document.
+        :rtype: generator
         """
         if not document:
             document = self.doc
@@ -107,18 +97,14 @@ class Autocad:
             yield layer
 
     def iter_blocks(self, document=None):
-        """Iters existing blocks definitions from the document passed.
+        """
+        Iterate over the existing block definitions in the specified document.
 
-        Parameters
-        ----------
-        document : win32com.client.CDispatch, None
-            COM object returned from AutoCAD application. If None is specified Active Document is used.
-             (Default value = None)
-
-        Yield
-        -------
-        generator
-            Generator of blocks definitions in the document passed.
+        :param document: COM object returned from the AutoCAD application. If `None` is specified,
+                         the active document is used.
+        :type document: win32com.client.CDispatch, None
+        :yield: Generator of block definitions in the specified document.
+        :rtype: generator
         """
         if not document:
             document = self.doc
@@ -126,33 +112,31 @@ class Autocad:
             yield block
 
     def iter_dim_styles(self, document=None):
-        """Iters existing dimensions styles from the document passed.
-
-        Parameters
-        ----------
-        document : {win32com.client.CDispatch, None}
-            COM object returned from AutoCAD application. If None is specified Active Document is used.
-             (Default value = None)
-
-        Yield
-        -------
-        generator
-            Generator of dim styles in document passed.
         """
-        pass
+        Iterate over the existing dimension styles in the specified document.
+
+        :param document: COM object returned from the AutoCAD application. If `None` is specified,
+                         the active document is used.
+        :type document: win32com.client.CDispatch, None
+        :yield: Generator of dimension styles in the specified document.
+        :rtype: generator
+        """
+        if not document:
+            document = self.doc
+        for dim_style in sorted(document.DimStyles, key=lambda x: x.Name):
+            yield dim_style
 
     def iter_text_styles(self, document=None):
-        """Iters existing texts styles from the document passed.
-
-        Parameters
-        ----------
-        document : win32com.client.CDispatch, None
-            COM object returned from AutoCAD application. If None is specified Active Document is used.
-             (Default value = None)
-
-        Yield
-        -------
-        generator
-            Generator of text styles in document passed.
         """
-        pass
+        Iterate over the existing text styles in the specified document.
+
+        :param document: COM object returned from the AutoCAD application. If `None` is specified,
+                         the active document is used.
+        :type document: win32com.client.CDispatch, None
+        :yield: Generator of text styles in the specified document.
+        :rtype: generator
+        """
+        if not document:
+            document = self.doc
+        for text_styles in sorted(document.TextStyles, key=lambda x: x.Name):
+            yield text_styles

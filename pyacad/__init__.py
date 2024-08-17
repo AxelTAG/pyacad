@@ -2,3 +2,4 @@
 
 from .Autocad import Autocad
 from .APoint import APoint
+from .Types import aDouble, aInt, aDispatch

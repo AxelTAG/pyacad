@@ -1,35 +1,39 @@
 import win32com.client
 import pythoncom
 import operator
+from win32com.client import VARIANT
 
 
 class APoint:
-    """3D point with basic geometric operations and support for passing as a
-    parameter for `AutoCAD` Automation functions
+    """
+    3D point with basic geometric operations and support for passing as a
+    parameter for `AutoCAD` Automation functions.
 
-    Attributes
-    ----------
-    x : int, float, list of int, list of float, tuple of int, tuple of float
-        The X coordinate of the point.
-    y : int, float, None
-        The Y coordinate of the point.
-    z : int, float, None
-        The Z coordinate of the point.
-
-    Methods
-    -------
-    distance_to(point)
-
+    :ivar x: The X coordinate of the point.
+    :vartype x: int, float, list of int, list of float, tuple of int, tuple of float
+    :ivar y: The Y coordinate of the point.
+    :vartype y: int, float, None
+    :ivar z: The Z coordinate of the point.
+    :vartype z: int, float, None
     """
 
     def __init__(self, x: float, y: float = 0, z: float = 0):
+        """
+        Initializes the Point3D with the given coordinates.
+
+        :param x: The X coordinate of the point.
+        :type x: int, float, list of int, list of float, tuple of int, tuple of float
+        :param y: The Y coordinate of the point.
+        :type y: int, float, None
+        :param z: The Z coordinate of the point.
+        :type z: int, float, None
+        """
         self._x = x
         self._y = y
         self._z = z
 
     @property
     def x(self):
-        """ """
         return self._x
 
     @x.setter
@@ -38,7 +42,6 @@ class APoint:
 
     @property
     def y(self):
-        """ """
         return self._y
 
     @y.setter
@@ -47,7 +50,6 @@ class APoint:
 
     @property
     def z(self):
-        """ """
         return self._z
 
     @z.setter
@@ -114,31 +116,26 @@ class APoint:
         return APoint(op(p1[0], p2[0]), op(p1[1], p2[1]), op(p1[2], p2[2]))
 
     def distance_to(self, other):
-        """Returns distance betwen two points 'p1' and 'p2'
+        """
+        Calculate the distance to another 3D point.
 
-        Parameters
-        ----------
-        other : APoint, the point at which the distance is calculated
-
-        Returns
-        -------
-
+        :param other: The other Point3D object to calculate the distance to.
+        :type other: Point3D
+        :return: The distance between the two points.
+        :rtype: float
         """
         return distance(self, other)
 
 
 def distance(p1, p2):
-    """Returns distance between two points `p1` and `p2`
+    """
+    Calculate the distance to another 3D point.
 
-    Parameters
-    ----------
-    p1 : APoint
-        
-    p2 : APoint
-        
-
-    Returns
-    -------
-
+    :param p1: The other Point3D object to calculate the distance to.
+    :type p1: Point3D
+    :param p2: The other Point3D object to calculate the distance to.
+    :type p2: Point3D
+    :return: The distance between the two points.
+    :rtype: float
     """
     return ((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2 + (p1.z - p2.z) ** 2) ** 0.5
