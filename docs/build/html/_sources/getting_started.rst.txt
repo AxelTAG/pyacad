@@ -1,0 +1,13 @@
+Getting started
+===============
+
+Some text.
+
+* Installation
+
+If you have pip or easy_install, you can just:
+pip install --upgrade pyacad
+
+* Requirements
+
+Some text.

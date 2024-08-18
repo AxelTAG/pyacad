@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>References &#8212; pyacad 0.0.4 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=c058f7c8" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=8c5712d9"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Usage" href="usage.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-pyacad.Autocad">
+<span id="references"></span><h1>References<a class="headerlink" href="#module-pyacad.Autocad" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyacad.Autocad.Autocad">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyacad.Autocad.</span></span><span class="sig-name descname"><span class="pre">Autocad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">create_if_not_exist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">visible</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyacad.Autocad.Autocad" title="Link to this definition">¶</a></dt>
+<dd><p>Main class of AutoCAD app.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyacad.Autocad.Autocad.app">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">app</span></span><a class="headerlink" href="#pyacad.Autocad.Autocad.app" title="Link to this definition">¶</a></dt>
+<dd><p>Creates/gets and returns AutoCAD Application.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyacad.Autocad.Autocad.doc">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">doc</span></span><a class="headerlink" href="#pyacad.Autocad.Autocad.doc" title="Link to this definition">¶</a></dt>
+<dd><p>Returns active document.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyacad.Autocad.Autocad.iter_blocks">
+<span class="sig-name descname"><span class="pre">iter_blocks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">document</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyacad.Autocad.Autocad.iter_blocks" title="Link to this definition">¶</a></dt>
+<dd><p>Iterate over the existing block definitions in the specified document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>document</strong> (<em>win32com.client.CDispatch</em><em>, </em><em>None</em>) – COM object returned from the AutoCAD application. If <cite>None</cite> is specified,
+the active document is used.</p>
+</dd>
+<dt class="field-even">Yield<span class="colon">:</span></dt>
+<dd class="field-even"><p>Generator of block definitions in the specified document.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>generator</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyacad.Autocad.Autocad.iter_dim_styles">
+<span class="sig-name descname"><span class="pre">iter_dim_styles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">document</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyacad.Autocad.Autocad.iter_dim_styles" title="Link to this definition">¶</a></dt>
+<dd><p>Iterate over the existing dimension styles in the specified document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>document</strong> (<em>win32com.client.CDispatch</em><em>, </em><em>None</em>) – COM object returned from the AutoCAD application. If <cite>None</cite> is specified,
+the active document is used.</p>
+</dd>
+<dt class="field-even">Yield<span class="colon">:</span></dt>
+<dd class="field-even"><p>Generator of dimension styles in the specified document.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>generator</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyacad.Autocad.Autocad.iter_layers">
+<span class="sig-name descname"><span class="pre">iter_layers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">document</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyacad.Autocad.Autocad.iter_layers" title="Link to this definition">¶</a></dt>
+<dd><p>Iterate over the layers in the specified document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>document</strong> (<em>win32com.client.CDispatch</em><em>, </em><em>None</em>) – COM object returned from the AutoCAD application. If <cite>None</cite> is specified,
+the active document is used.</p>
+</dd>
+<dt class="field-even">Yield<span class="colon">:</span></dt>
+<dd class="field-even"><p>Generator of layers in the specified document.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>generator</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyacad.Autocad.Autocad.iter_layouts">
+<span class="sig-name descname"><span class="pre">iter_layouts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">document</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyacad.Autocad.Autocad.iter_layouts" title="Link to this definition">¶</a></dt>
+<dd><p>Iterate over the layouts in the specified document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>document</strong> (<em>win32com.client.CDispatch</em><em>, </em><em>None</em>) – COM object returned from the AutoCAD application. If <cite>None</cite> is specified,
+the active document is used.</p></li>
+<li><p><strong>skip_model</strong> (<em>bool</em>) – Whether to skip the model layout. Defaults to <cite>False</cite>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Yield<span class="colon">:</span></dt>
+<dd class="field-even"><p>Generator of layouts in the specified document.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>generator</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyacad.Autocad.Autocad.iter_objects">
+<span class="sig-name descname"><span class="pre">iter_objects</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_for</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyacad.Autocad.Autocad.iter_objects" title="Link to this definition">¶</a></dt>
+<dd><p>Iterate over the objects in a specified ‘block’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>block</strong> (<em>win32com.client.CDispatch</em><em>, </em><em>None</em>) – COM object returned from the AutoCAD application. If <cite>None</cite> is specified,
+the active layout is used.</p></li>
+<li><p><strong>filter_for</strong> (<em>list</em><em> of </em><em>str</em><em>, </em><em>tuple</em><em> of </em><em>str</em><em>, </em><em>None</em>) – A filter for specific object types. Can be a list or tuple of strings.
+If <cite>None</cite>, no filtering is applied.</p></li>
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>None</em>) – The maximum number of objects to iterate over. If <cite>None</cite>, no limit is applied.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Yield<span class="colon">:</span></dt>
+<dd class="field-even"><p>Generator of objects in the specified layout or active layout if none is specified.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>generator</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyacad.Autocad.Autocad.iter_text_styles">
+<span class="sig-name descname"><span class="pre">iter_text_styles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">document</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyacad.Autocad.Autocad.iter_text_styles" title="Link to this definition">¶</a></dt>
+<dd><p>Iterate over the existing text styles in the specified document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>document</strong> (<em>win32com.client.CDispatch</em><em>, </em><em>None</em>) – COM object returned from the AutoCAD application. If <cite>None</cite> is specified,
+the active document is used.</p>
+</dd>
+<dt class="field-even">Yield<span class="colon">:</span></dt>
+<dd class="field-even"><p>Generator of text styles in the specified document.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>generator</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyacad.Autocad.Autocad.model">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#pyacad.Autocad.Autocad.model" title="Link to this definition">¶</a></dt>
+<dd><p>Returns active model space of curring document.</p>
+</dd></dl>
+
+</dd></dl>
+
+<p>===</p>
+<dl class="py class" id="module-pyacad.APoint">
+<dt class="sig sig-object py" id="pyacad.APoint.APoint">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyacad.APoint.</span></span><span class="sig-name descname"><span class="pre">APoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyacad.APoint.APoint" title="Link to this definition">¶</a></dt>
+<dd><p>3D point with basic geometric operations and support for passing as a
+parameter for <cite>AutoCAD</cite> Automation functions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>int</em><em>, </em><em>float</em><em>, </em><em>list</em><em> of </em><em>int</em><em>, </em><em>list</em><em> of </em><em>float</em><em>, </em><em>tuple</em><em> of </em><em>int</em><em>, </em><em>tuple</em><em> of </em><em>float</em>) – The X coordinate of the point.</p></li>
+<li><p><strong>y</strong> (<em>int</em><em>, </em><em>float</em><em>, </em><em>None</em>) – The Y coordinate of the point.</p></li>
+<li><p><strong>z</strong> (<em>int</em><em>, </em><em>float</em><em>, </em><em>None</em>) – The Z coordinate of the point.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyacad.APoint.APoint.distance_to">
+<span class="sig-name descname"><span class="pre">distance_to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyacad.APoint.APoint.distance_to" title="Link to this definition">¶</a></dt>
+<dd><p>Calculate the distance to another 3D point.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> (<em>Point3D</em>) – The other Point3D object to calculate the distance to.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The distance between the two points.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyacad.APoint.APoint.x">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">x</span></span><a class="headerlink" href="#pyacad.APoint.APoint.x" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyacad.APoint.APoint.y">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">y</span></span><a class="headerlink" href="#pyacad.APoint.APoint.y" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyacad.APoint.APoint.z">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">z</span></span><a class="headerlink" href="#pyacad.APoint.APoint.z" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyacad.APoint.distance">
+<span class="sig-prename descclassname"><span class="pre">pyacad.APoint.</span></span><span class="sig-name descname"><span class="pre">distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyacad.APoint.distance" title="Link to this definition">¶</a></dt>
+<dd><p>Calculate the distance to another 3D point.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p1</strong> (<em>Point3D</em>) – The other Point3D object to calculate the distance to.</p></li>
+<li><p><strong>p2</strong> (<em>Point3D</em>) – The other Point3D object to calculate the distance to.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The distance between the two points.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>===</p>
+<dl class="py function" id="module-pyacad.Types">
+<dt class="sig sig-object py" id="pyacad.Types.aDispatch">
+<span class="sig-prename descclassname"><span class="pre">pyacad.Types.</span></span><span class="sig-name descname"><span class="pre">aDispatch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyacad.Types.aDispatch" title="Link to this definition">¶</a></dt>
+<dd><p>Packs a win32 object into Variant Array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>object</strong> – Win32 object.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>An array variant suitable for AutoCAD.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>VARIANT</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyacad.Types.aDouble">
+<span class="sig-prename descclassname"><span class="pre">pyacad.Types.</span></span><span class="sig-name descname"><span class="pre">aDouble</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xyz</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyacad.Types.aDouble" title="Link to this definition">¶</a></dt>
+<dd><p>Packs a list or tuple of floats into an array for passing to AutoCAD.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>xyz</strong> (<em>list</em><em> of </em><em>float</em><em>, </em><em>tuple</em><em> of </em><em>float</em>) – A tuple or list of floats to be packed into an array.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>An array variant suitable for AutoCAD.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>VARIANT</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyacad.Types.aInt">
+<span class="sig-prename descclassname"><span class="pre">pyacad.Types.</span></span><span class="sig-name descname"><span class="pre">aInt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xyz</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyacad.Types.aInt" title="Link to this definition">¶</a></dt>
+<dd><p>Packs list of floats into an array for passing to AutoCAD (same as aDouble).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>xyz</strong> (<em>list</em><em> of </em><em>float</em><em>, </em><em>tuple</em><em> of </em><em>float</em>) – List of floats or integers.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>An array variant suitable for AutoCAD.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>VARIANT</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">pyacad</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">References</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pyacad.Autocad.Autocad"><code class="docutils literal notranslate"><span class="pre">Autocad</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pyacad.APoint.APoint"><code class="docutils literal notranslate"><span class="pre">APoint</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pyacad.APoint.distance"><code class="docutils literal notranslate"><span class="pre">distance()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pyacad.Types.aDispatch"><code class="docutils literal notranslate"><span class="pre">aDispatch()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pyacad.Types.aDouble"><code class="docutils literal notranslate"><span class="pre">aDouble()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pyacad.Types.aInt"><code class="docutils literal notranslate"><span class="pre">aInt()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="usage.html" title="previous chapter">Usage</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, Kevin Axel Tagliaferri.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/API.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

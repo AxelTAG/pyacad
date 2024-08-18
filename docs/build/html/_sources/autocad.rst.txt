@@ -1,0 +1,9 @@
+Autocad API
+===========
+
+Some text.
+
+.. automodule:: pyacad
+   :members:
+   :undoc-members:
+   :show-inheritance:

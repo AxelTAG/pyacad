@@ -140,3 +140,13 @@ class Autocad:
             document = self.doc
         for text_styles in sorted(document.TextStyles, key=lambda x: x.Name):
             yield text_styles
+
+    def iter_documents(self):
+        """
+        Iterate over all the open documents.
+
+        :yield: Generator of documents.
+        :rtype: generator
+        """
+        for document in self.app.Documents:
+            yield document
