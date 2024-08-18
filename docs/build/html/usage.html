@@ -1,52 +1,117 @@
 <!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<html lang="en" data-content_root="./">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Usage &mdash; pyacad 0.0.5 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
 
-    <title>Usage &#8212; pyacad 0.0.4 documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
-    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=c058f7c8" />
-    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
-    <script src="_static/documentation_options.js?v=8c5712d9"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=282f96c0"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="References" href="API.html" />
-    <link rel="prev" title="Getting started" href="gettingstarted.html" />
-   
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
+    <link rel="prev" title="Getting started" href="gettingstarted.html" /> 
+</head>
 
-  
-  
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
 
-  </head><body>
-  
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
           
+          
+          <a href="index.html" class="icon icon-home">
+            pyacad
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#initializing-the-autocad-api">Initializing the AutoCAD API:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#retrieving-active-document-name">Retrieving active document name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-objects-to-the-active-document">Adding objects to the active document</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#points">Points</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lines">Lines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#polylines">Polylines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#circles">Circles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#text">Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#multilinetext">MultiLineText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hatch">Hatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#aligned-dimension">Aligned Dimension</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#further-information-about-objects">Further information about objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#retrieving-documents-from-the-autocad-api">Retrieving documents from the AutoCAD API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#retrieving-blocks-from-the-document">Retrieving blocks from the document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#retrieving-dimension-styles-from-the-document">Retrieving dimension styles from the document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#retrieving-layers-from-the-document">Retrieving layers from the document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#retrieving-layouts-from-the-document">Retrieving layouts from the document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#retrieving-objects-from-the-document">Retrieving objects from the document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#retrieving-text-styles-from-the-document">Retrieving text styles from the document</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API.html">References</a></li>
+</ul>
 
-          <div class="body" role="main">
-            
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pyacad</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Usage</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/usage.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
   <section id="usage">
-<h1>Usage<a class="headerlink" href="#usage" title="Link to this heading">¶</a></h1>
+<h1>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h1>
 <p>For the following examples, we will use <code class="xref py py-class docutils literal notranslate"><span class="pre">Autocad</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">APoint</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyacad</span> <span class="kn">import</span> <span class="n">Autocad</span>
 </pre></div>
 </div>
 <section id="initializing-the-autocad-api">
-<h2>Initializing the AutoCAD API:<a class="headerlink" href="#initializing-the-autocad-api" title="Link to this heading">¶</a></h2>
+<h2>Initializing the AutoCAD API:<a class="headerlink" href="#initializing-the-autocad-api" title="Link to this heading"></a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">acad</span> <span class="o">=</span> <span class="n">Autocad</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
 <section id="retrieving-active-document-name">
-<h2>Retrieving active document name<a class="headerlink" href="#retrieving-active-document-name" title="Link to this heading">¶</a></h2>
+<h2>Retrieving active document name<a class="headerlink" href="#retrieving-active-document-name" title="Link to this heading"></a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Only the document name.</span>
 <span class="n">acad</span><span class="o">.</span><span class="n">doc</span><span class="o">.</span><span class="n">Name</span>
 
@@ -56,23 +121,23 @@
 </div>
 </section>
 <section id="adding-objects-to-the-active-document">
-<h2>Adding objects to the active document<a class="headerlink" href="#adding-objects-to-the-active-document" title="Link to this heading">¶</a></h2>
+<h2>Adding objects to the active document<a class="headerlink" href="#adding-objects-to-the-active-document" title="Link to this heading"></a></h2>
 <section id="points">
-<h3>Points<a class="headerlink" href="#points" title="Link to this heading">¶</a></h3>
+<h3>Points<a class="headerlink" href="#points" title="Link to this heading"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">p0</span> <span class="o">=</span> <span class="n">APoint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">point</span> <span class="o">=</span> <span class="n">acad</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">AddPoint</span><span class="p">(</span><span class="n">p0</span><span class="p">())</span>
 </pre></div>
 </div>
 </section>
 <section id="lines">
-<h3>Lines<a class="headerlink" href="#lines" title="Link to this heading">¶</a></h3>
+<h3>Lines<a class="headerlink" href="#lines" title="Link to this heading"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">p0</span><span class="p">,</span> <span class="n">p1</span> <span class="o">=</span> <span class="n">APoint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">APoint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">line</span> <span class="o">=</span> <span class="n">acad</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">AddLine</span><span class="p">(</span><span class="n">p0</span><span class="p">(),</span> <span class="n">p1</span><span class="p">())</span>
 </pre></div>
 </div>
 </section>
 <section id="polylines">
-<h3>Polylines<a class="headerlink" href="#polylines" title="Link to this heading">¶</a></h3>
+<h3>Polylines<a class="headerlink" href="#polylines" title="Link to this heading"></a></h3>
 <p>For drawing polylines we need to use aDouble.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyacad</span> <span class="kn">import</span> <span class="n">aDouble</span>
 <span class="n">points</span> <span class="o">=</span> <span class="n">aDouble</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
@@ -81,7 +146,7 @@
 </div>
 </section>
 <section id="circles">
-<h3>Circles<a class="headerlink" href="#circles" title="Link to this heading">¶</a></h3>
+<h3>Circles<a class="headerlink" href="#circles" title="Link to this heading"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">p0</span> <span class="o">=</span> <span class="n">APoint</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">radius</span> <span class="o">=</span> <span class="mf">.5</span>
 <span class="n">circle</span> <span class="o">=</span> <span class="n">acad</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">AddCircle</span><span class="p">(</span><span class="n">p0</span><span class="p">(),</span> <span class="n">radius</span><span class="p">)</span>
@@ -89,7 +154,7 @@
 </div>
 </section>
 <section id="text">
-<h3>Text<a class="headerlink" href="#text" title="Link to this heading">¶</a></h3>
+<h3>Text<a class="headerlink" href="#text" title="Link to this heading"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">p0</span> <span class="o">=</span> <span class="n">APoint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 <span class="n">height</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">textstring</span> <span class="o">=</span> <span class="s2">&quot;Hello World!&quot;</span>
@@ -98,7 +163,7 @@
 </div>
 </section>
 <section id="multilinetext">
-<h3>MultiLineText<a class="headerlink" href="#multilinetext" title="Link to this heading">¶</a></h3>
+<h3>MultiLineText<a class="headerlink" href="#multilinetext" title="Link to this heading"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">p0</span> <span class="o">=</span> <span class="n">APoint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 <span class="n">width</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">textstring</span> <span class="o">=</span> <span class="s2">&quot;This is a MText.&quot;</span>
@@ -107,7 +172,7 @@
 </div>
 </section>
 <section id="hatch">
-<h3>Hatch<a class="headerlink" href="#hatch" title="Link to this heading">¶</a></h3>
+<h3>Hatch<a class="headerlink" href="#hatch" title="Link to this heading"></a></h3>
 <p>For drawing hatchs we need to use aDispatch.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Defining boundary.</span>
 <span class="n">outer_boundary</span> <span class="o">=</span> <span class="p">[]</span>
@@ -122,7 +187,7 @@
 </div>
 </section>
 <section id="aligned-dimension">
-<h3>Aligned Dimension<a class="headerlink" href="#aligned-dimension" title="Link to this heading">¶</a></h3>
+<h3>Aligned Dimension<a class="headerlink" href="#aligned-dimension" title="Link to this heading"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">p0</span><span class="p">,</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span> <span class="o">=</span> <span class="n">APoint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">APoint</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">APoint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">)</span>
 <span class="n">acad</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">AddDimAligned</span><span class="p">(</span><span class="n">p0</span><span class="p">(),</span> <span class="n">p1</span><span class="p">(),</span> <span class="n">p3</span><span class="p">())</span>
 </pre></div>
@@ -130,7 +195,7 @@
 </section>
 </section>
 <section id="further-information-about-objects">
-<h2>Further information about objects<a class="headerlink" href="#further-information-about-objects" title="Link to this heading">¶</a></h2>
+<h2>Further information about objects<a class="headerlink" href="#further-information-about-objects" title="Link to this heading"></a></h2>
 <p>For more information on creating objects, I recommend visiting the official Autodesk site on ActiveX Automation for your corresponding version of AutoCAD.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://help.autodesk.com/view/OARX/2024/ENU/?guid=GUID-36BF58F3-537D-4B59-BEFE-2D0FEF5A4443">AutoCAD 2024</a></p></li>
@@ -138,13 +203,13 @@
 </ul>
 </section>
 <section id="retrieving-documents-from-the-autocad-api">
-<h2>Retrieving documents from the AutoCAD API<a class="headerlink" href="#retrieving-documents-from-the-autocad-api" title="Link to this heading">¶</a></h2>
+<h2>Retrieving documents from the AutoCAD API<a class="headerlink" href="#retrieving-documents-from-the-autocad-api" title="Link to this heading"></a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">acad</span><span class="o">.</span><span class="n">iter_documents</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
 <section id="retrieving-blocks-from-the-document">
-<h2>Retrieving blocks from the document<a class="headerlink" href="#retrieving-blocks-from-the-document" title="Link to this heading">¶</a></h2>
+<h2>Retrieving blocks from the document<a class="headerlink" href="#retrieving-blocks-from-the-document" title="Link to this heading"></a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">blocks</span> <span class="o">=</span> <span class="n">acad</span><span class="o">.</span><span class="n">iter_blocks</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -156,28 +221,28 @@
 </div>
 </section>
 <section id="retrieving-dimension-styles-from-the-document">
-<h2>Retrieving dimension styles from the document<a class="headerlink" href="#retrieving-dimension-styles-from-the-document" title="Link to this heading">¶</a></h2>
+<h2>Retrieving dimension styles from the document<a class="headerlink" href="#retrieving-dimension-styles-from-the-document" title="Link to this heading"></a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dim_styles</span> <span class="o">=</span> <span class="n">acad</span><span class="o">.</span><span class="n">iter_dim_styles</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>You can also do it in the same way as shown in iter_blocks().</p>
 </section>
 <section id="retrieving-layers-from-the-document">
-<h2>Retrieving layers from the document<a class="headerlink" href="#retrieving-layers-from-the-document" title="Link to this heading">¶</a></h2>
+<h2>Retrieving layers from the document<a class="headerlink" href="#retrieving-layers-from-the-document" title="Link to this heading"></a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">layers</span> <span class="o">=</span> <span class="n">acad</span><span class="o">.</span><span class="n">iter_layers</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>You can also do it in the same way as shown in iter_blocks().</p>
 </section>
 <section id="retrieving-layouts-from-the-document">
-<h2>Retrieving layouts from the document<a class="headerlink" href="#retrieving-layouts-from-the-document" title="Link to this heading">¶</a></h2>
+<h2>Retrieving layouts from the document<a class="headerlink" href="#retrieving-layouts-from-the-document" title="Link to this heading"></a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">layouts</span> <span class="o">=</span> <span class="n">acad</span><span class="o">.</span><span class="n">iter_layouts</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>You can also do it in the same way as shown in iter_blocks().</p>
 </section>
 <section id="retrieving-objects-from-the-document">
-<h2>Retrieving objects from the document<a class="headerlink" href="#retrieving-objects-from-the-document" title="Link to this heading">¶</a></h2>
+<h2>Retrieving objects from the document<a class="headerlink" href="#retrieving-objects-from-the-document" title="Link to this heading"></a></h2>
 <p>You can iterate over the objects in a drawing.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">objects</span> <span class="o">=</span> <span class="n">acad</span><span class="o">.</span><span class="n">iter_objects</span><span class="p">()</span>
 </pre></div>
@@ -188,7 +253,7 @@
 </div>
 </section>
 <section id="retrieving-text-styles-from-the-document">
-<h2>Retrieving text styles from the document<a class="headerlink" href="#retrieving-text-styles-from-the-document" title="Link to this heading">¶</a></h2>
+<h2>Retrieving text styles from the document<a class="headerlink" href="#retrieving-text-styles-from-the-document" title="Link to this heading"></a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">text_styles</span> <span class="o">=</span> <span class="n">acad</span><span class="o">.</span><span class="n">iter_text_styles</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -197,86 +262,34 @@
 </section>
 
 
+           </div>
           </div>
-          
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="gettingstarted.html" class="btn btn-neutral float-left" title="Getting started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="API.html" class="btn btn-neutral float-right" title="References" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Kevin Axel Tagliaferri.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="Main">
-        <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="index.html">pyacad</a></h1>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
 
-
-
-
-
-
-
-
-
-<search id="searchbox" style="display: none" role="search">
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</search>
-<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
-<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting started</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Usage</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#initializing-the-autocad-api">Initializing the AutoCAD API:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#retrieving-active-document-name">Retrieving active document name</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#adding-objects-to-the-active-document">Adding objects to the active document</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#further-information-about-objects">Further information about objects</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#retrieving-documents-from-the-autocad-api">Retrieving documents from the AutoCAD API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#retrieving-blocks-from-the-document">Retrieving blocks from the document</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#retrieving-dimension-styles-from-the-document">Retrieving dimension styles from the document</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#retrieving-layers-from-the-document">Retrieving layers from the document</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#retrieving-layouts-from-the-document">Retrieving layouts from the document</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#retrieving-objects-from-the-document">Retrieving objects from the document</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#retrieving-text-styles-from-the-document">Retrieving text styles from the document</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="API.html">References</a></li>
-</ul>
-
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="gettingstarted.html" title="previous chapter">Getting started</a></li>
-      <li>Next: <a href="API.html" title="next chapter">References</a></li>
-  </ul></li>
-</ul>
-</div>
-
-
-
-
-
-
-
-
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &#169;2024, Kevin Axel Tagliaferri.
-      
-      |
-      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
-      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
-      
-      |
-      <a href="_sources/usage.rst.txt"
-          rel="nofollow">Page source</a>
-    </div>
-
-    
-
-    
-  </body>
+</body>
 </html>
