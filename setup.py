@@ -1,4 +1,10 @@
+import platform
 from setuptools import setup, find_packages
+
+install_requires = []
+
+if platform.system() == "Windows":
+      install_requires.append("pywin32")
 
 readme = open("./README.md", "r")
 
@@ -11,4 +17,4 @@ setup(name="pyacad",
       author="Kevin Axel Tagliaferri",
       author_email='kevinaxeltagliaferri@hotmail.com',
       url="https://github.com/AxelTAG/pyacad.git",
-      install_requires=['pywin32'])
+      install_requires=install_requires)
