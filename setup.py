@@ -4,7 +4,7 @@ readme = open("./README.md", "r")
 
 setup(name="pyacad",
       packages=["pyacad"],
-      version="0.0.4",
+      version="0.0.5",
       description="A package aimed to simplfy coding of Activex Automation Module of AutoCAD, based on pywin32 library.",
       long_description = readme.read(),
       long_description_content_type="text/markdown",
