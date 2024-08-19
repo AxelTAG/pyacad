@@ -24,9 +24,8 @@ html_context = {
     "display_github": True,
     "github_user": "axeltag",
     "github_repo": "pyacad",
-    "github_version": "main",
-    "conf_py_path": "/docs/source/",
-}
+    "github_version": "main"
+}  # "conf_py_path": "/docs/source/",
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output

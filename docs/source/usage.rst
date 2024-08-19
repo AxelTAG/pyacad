@@ -109,12 +109,15 @@ Aligned Dimension
     acad.model.AddDimAligned(p0(), p1(), p3())
 
 Further information about objects
----------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For more information on creating objects, I recommend visiting the official Autodesk site on ActiveX Automation for your corresponding version of AutoCAD.
 
 * `AutoCAD 2024 <https://help.autodesk.com/view/OARX/2024/ENU/?guid=GUID-36BF58F3-537D-4B59-BEFE-2D0FEF5A4443>`_
 * `AutoCAD 2023 <https://help.autodesk.com/view/OARX/2023/ENU/?guid=GUID-36BF58F3-537D-4B59-BEFE-2D0FEF5A4443>`_
+
+Retrieving over documents, layouts, layer, objects and more.
+------------------------------------------------------------
 
 Retrieving documents from the AutoCAD API
 -----------------------------------------
