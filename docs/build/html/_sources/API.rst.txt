@@ -5,13 +5,13 @@ References
    :members:
    :undoc-members:
 
-===
+---
 
 .. automodule:: pyacad.APoint
    :members:
    :undoc-members:
 
-===
+---
 
 .. automodule:: pyacad.Types
    :members:
