@@ -1,0 +1,22 @@
+\indexentry{module@\spxentry{module}!pyacad.Autocad@\spxentry{pyacad.Autocad}|hyperpage}{9}
+\indexentry{pyacad.Autocad@\spxentry{pyacad.Autocad}!module@\spxentry{module}|hyperpage}{9}
+\indexentry{Autocad (class in pyacad.Autocad)@\spxentry{Autocad}\spxextra{class in pyacad.Autocad}|hyperpage}{9}
+\indexentry{app (pyacad.Autocad.Autocad property)@\spxentry{app}\spxextra{pyacad.Autocad.Autocad property}|hyperpage}{9}
+\indexentry{doc (pyacad.Autocad.Autocad property)@\spxentry{doc}\spxextra{pyacad.Autocad.Autocad property}|hyperpage}{9}
+\indexentry{iter\_blocks() (pyacad.Autocad.Autocad method)@\spxentry{iter\_blocks()}\spxextra{pyacad.Autocad.Autocad method}|hyperpage}{9}
+\indexentry{iter\_dim\_styles() (pyacad.Autocad.Autocad method)@\spxentry{iter\_dim\_styles()}\spxextra{pyacad.Autocad.Autocad method}|hyperpage}{9}
+\indexentry{iter\_layers() (pyacad.Autocad.Autocad method)@\spxentry{iter\_layers()}\spxextra{pyacad.Autocad.Autocad method}|hyperpage}{9}
+\indexentry{iter\_layouts() (pyacad.Autocad.Autocad method)@\spxentry{iter\_layouts()}\spxextra{pyacad.Autocad.Autocad method}|hyperpage}{10}
+\indexentry{iter\_objects() (pyacad.Autocad.Autocad method)@\spxentry{iter\_objects()}\spxextra{pyacad.Autocad.Autocad method}|hyperpage}{10}
+\indexentry{iter\_text\_styles() (pyacad.Autocad.Autocad method)@\spxentry{iter\_text\_styles()}\spxextra{pyacad.Autocad.Autocad method}|hyperpage}{10}
+\indexentry{model (pyacad.Autocad.Autocad property)@\spxentry{model}\spxextra{pyacad.Autocad.Autocad property}|hyperpage}{10}
+\indexentry{module@\spxentry{module}!pyacad.APoint@\spxentry{pyacad.APoint}|hyperpage}{10}
+\indexentry{pyacad.APoint@\spxentry{pyacad.APoint}!module@\spxentry{module}|hyperpage}{10}
+\indexentry{APoint (class in pyacad.APoint)@\spxentry{APoint}\spxextra{class in pyacad.APoint}|hyperpage}{10}
+\indexentry{distance\_to() (pyacad.APoint.APoint method)@\spxentry{distance\_to()}\spxextra{pyacad.APoint.APoint method}|hyperpage}{10}
+\indexentry{distance() (in module pyacad.APoint)@\spxentry{distance()}\spxextra{in module pyacad.APoint}|hyperpage}{11}
+\indexentry{module@\spxentry{module}!pyacad.Types@\spxentry{pyacad.Types}|hyperpage}{11}
+\indexentry{pyacad.Types@\spxentry{pyacad.Types}!module@\spxentry{module}|hyperpage}{11}
+\indexentry{aDispatch() (in module pyacad.Types)@\spxentry{aDispatch()}\spxextra{in module pyacad.Types}|hyperpage}{11}
+\indexentry{aDouble() (in module pyacad.Types)@\spxentry{aDouble()}\spxextra{in module pyacad.Types}|hyperpage}{11}
+\indexentry{aInt() (in module pyacad.Types)@\spxentry{aInt()}\spxextra{in module pyacad.Types}|hyperpage}{11}

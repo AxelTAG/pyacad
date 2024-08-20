@@ -120,14 +120,14 @@ Retrieving over documents, layouts, layer, objects and more.
 ------------------------------------------------------------
 
 Retrieving documents from the AutoCAD API
------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code:: python
 
     acad.iter_documents()
 
 Retrieving blocks from the document
------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code:: python
 
@@ -142,7 +142,7 @@ Alternatively, you can pass a specific document using the document parameter, wh
     blocks = acad.iter_blocks(document=doc_selected)
 
 Retrieving dimension styles from the document
----------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code:: python
 
@@ -151,7 +151,7 @@ Retrieving dimension styles from the document
 You can also do it in the same way as shown in iter_blocks().
 
 Retrieving layers from the document
----------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code:: python
 
@@ -160,7 +160,7 @@ Retrieving layers from the document
 You can also do it in the same way as shown in iter_blocks().
 
 Retrieving layouts from the document
-------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code:: python
 
@@ -169,7 +169,7 @@ Retrieving layouts from the document
 You can also do it in the same way as shown in iter_blocks().
 
 Retrieving objects from the document
-------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can iterate over the objects in a drawing.
 
@@ -184,7 +184,7 @@ Also you can filter for a concrete obejct type.
     text_obejects = acad.iter_objects("Text")
 
 Retrieving text styles from the document
-----------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code:: python
 

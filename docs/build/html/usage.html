@@ -62,14 +62,16 @@
 <li class="toctree-l3"><a class="reference internal" href="#further-information-about-objects">Further information about objects</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#retrieving-over-documents-layouts-layer-objects-and-more">Retrieving over documents, layouts, layer, objects and more.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#retrieving-documents-from-the-autocad-api">Retrieving documents from the AutoCAD API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#retrieving-blocks-from-the-document">Retrieving blocks from the document</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#retrieving-dimension-styles-from-the-document">Retrieving dimension styles from the document</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#retrieving-layers-from-the-document">Retrieving layers from the document</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#retrieving-layouts-from-the-document">Retrieving layouts from the document</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#retrieving-objects-from-the-document">Retrieving objects from the document</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#retrieving-text-styles-from-the-document">Retrieving text styles from the document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#retrieving-over-documents-layouts-layer-objects-and-more">Retrieving over documents, layouts, layer, objects and more.</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#retrieving-documents-from-the-autocad-api">Retrieving documents from the AutoCAD API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#retrieving-blocks-from-the-document">Retrieving blocks from the document</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#retrieving-dimension-styles-from-the-document">Retrieving dimension styles from the document</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#retrieving-layers-from-the-document">Retrieving layers from the document</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#retrieving-layouts-from-the-document">Retrieving layouts from the document</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#retrieving-objects-from-the-document">Retrieving objects from the document</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#retrieving-text-styles-from-the-document">Retrieving text styles from the document</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="API.html">References</a></li>
@@ -205,15 +207,14 @@
 </section>
 <section id="retrieving-over-documents-layouts-layer-objects-and-more">
 <h2>Retrieving over documents, layouts, layer, objects and more.<a class="headerlink" href="#retrieving-over-documents-layouts-layer-objects-and-more" title="Link to this heading"></a></h2>
-</section>
 <section id="retrieving-documents-from-the-autocad-api">
-<h2>Retrieving documents from the AutoCAD API<a class="headerlink" href="#retrieving-documents-from-the-autocad-api" title="Link to this heading"></a></h2>
+<h3>Retrieving documents from the AutoCAD API<a class="headerlink" href="#retrieving-documents-from-the-autocad-api" title="Link to this heading"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">acad</span><span class="o">.</span><span class="n">iter_documents</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
 <section id="retrieving-blocks-from-the-document">
-<h2>Retrieving blocks from the document<a class="headerlink" href="#retrieving-blocks-from-the-document" title="Link to this heading"></a></h2>
+<h3>Retrieving blocks from the document<a class="headerlink" href="#retrieving-blocks-from-the-document" title="Link to this heading"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">blocks</span> <span class="o">=</span> <span class="n">acad</span><span class="o">.</span><span class="n">iter_blocks</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -225,28 +226,28 @@
 </div>
 </section>
 <section id="retrieving-dimension-styles-from-the-document">
-<h2>Retrieving dimension styles from the document<a class="headerlink" href="#retrieving-dimension-styles-from-the-document" title="Link to this heading"></a></h2>
+<h3>Retrieving dimension styles from the document<a class="headerlink" href="#retrieving-dimension-styles-from-the-document" title="Link to this heading"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dim_styles</span> <span class="o">=</span> <span class="n">acad</span><span class="o">.</span><span class="n">iter_dim_styles</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>You can also do it in the same way as shown in iter_blocks().</p>
 </section>
 <section id="retrieving-layers-from-the-document">
-<h2>Retrieving layers from the document<a class="headerlink" href="#retrieving-layers-from-the-document" title="Link to this heading"></a></h2>
+<h3>Retrieving layers from the document<a class="headerlink" href="#retrieving-layers-from-the-document" title="Link to this heading"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">layers</span> <span class="o">=</span> <span class="n">acad</span><span class="o">.</span><span class="n">iter_layers</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>You can also do it in the same way as shown in iter_blocks().</p>
 </section>
 <section id="retrieving-layouts-from-the-document">
-<h2>Retrieving layouts from the document<a class="headerlink" href="#retrieving-layouts-from-the-document" title="Link to this heading"></a></h2>
+<h3>Retrieving layouts from the document<a class="headerlink" href="#retrieving-layouts-from-the-document" title="Link to this heading"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">layouts</span> <span class="o">=</span> <span class="n">acad</span><span class="o">.</span><span class="n">iter_layouts</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>You can also do it in the same way as shown in iter_blocks().</p>
 </section>
 <section id="retrieving-objects-from-the-document">
-<h2>Retrieving objects from the document<a class="headerlink" href="#retrieving-objects-from-the-document" title="Link to this heading"></a></h2>
+<h3>Retrieving objects from the document<a class="headerlink" href="#retrieving-objects-from-the-document" title="Link to this heading"></a></h3>
 <p>You can iterate over the objects in a drawing.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">objects</span> <span class="o">=</span> <span class="n">acad</span><span class="o">.</span><span class="n">iter_objects</span><span class="p">()</span>
 </pre></div>
@@ -257,11 +258,12 @@
 </div>
 </section>
 <section id="retrieving-text-styles-from-the-document">
-<h2>Retrieving text styles from the document<a class="headerlink" href="#retrieving-text-styles-from-the-document" title="Link to this heading"></a></h2>
+<h3>Retrieving text styles from the document<a class="headerlink" href="#retrieving-text-styles-from-the-document" title="Link to this heading"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">text_styles</span> <span class="o">=</span> <span class="n">acad</span><span class="o">.</span><span class="n">iter_text_styles</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>You can also do it in the same way as shown in iter_blocks().</p>
+</section>
 </section>
 </section>
 

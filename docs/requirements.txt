@@ -1,7 +1,4 @@
 sphinx
 
+
 sphinx-rtd-theme
-
-win32com
-
-pythoncom
