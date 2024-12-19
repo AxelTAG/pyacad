@@ -128,14 +128,14 @@
 <section id="points">
 <h3>Points<a class="headerlink" href="#points" title="Link to this heading"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">p0</span> <span class="o">=</span> <span class="n">APoint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">point</span> <span class="o">=</span> <span class="n">acad</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">AddPoint</span><span class="p">(</span><span class="n">p0</span><span class="p">())</span>
+<span class="n">point</span> <span class="o">=</span> <span class="n">acad</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">AddPoint</span><span class="p">(</span><span class="n">p0</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="lines">
 <h3>Lines<a class="headerlink" href="#lines" title="Link to this heading"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">p0</span><span class="p">,</span> <span class="n">p1</span> <span class="o">=</span> <span class="n">APoint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">APoint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">line</span> <span class="o">=</span> <span class="n">acad</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">AddLine</span><span class="p">(</span><span class="n">p0</span><span class="p">(),</span> <span class="n">p1</span><span class="p">())</span>
+<span class="n">line</span> <span class="o">=</span> <span class="n">acad</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">AddLine</span><span class="p">(</span><span class="n">p0</span><span class="p">,</span> <span class="n">p1</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -152,7 +152,7 @@
 <h3>Circles<a class="headerlink" href="#circles" title="Link to this heading"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">p0</span> <span class="o">=</span> <span class="n">APoint</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">radius</span> <span class="o">=</span> <span class="mf">.5</span>
-<span class="n">circle</span> <span class="o">=</span> <span class="n">acad</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">AddCircle</span><span class="p">(</span><span class="n">p0</span><span class="p">(),</span> <span class="n">radius</span><span class="p">)</span>
+<span class="n">circle</span> <span class="o">=</span> <span class="n">acad</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">AddCircle</span><span class="p">(</span><span class="n">p0</span><span class="p">,</span> <span class="n">radius</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -161,7 +161,7 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">p0</span> <span class="o">=</span> <span class="n">APoint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 <span class="n">height</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">textstring</span> <span class="o">=</span> <span class="s2">&quot;Hello World!&quot;</span>
-<span class="n">text</span> <span class="o">=</span> <span class="n">acad</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">AddText</span><span class="p">(</span><span class="n">textstring</span><span class="p">,</span> <span class="n">p0</span><span class="p">(),</span> <span class="n">height</span><span class="p">)</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">acad</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">AddText</span><span class="p">(</span><span class="n">textstring</span><span class="p">,</span> <span class="n">p0</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -170,7 +170,7 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">p0</span> <span class="o">=</span> <span class="n">APoint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 <span class="n">width</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">textstring</span> <span class="o">=</span> <span class="s2">&quot;This is a MText.&quot;</span>
-<span class="n">mtext</span> <span class="o">=</span> <span class="n">acad</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">AddMText</span><span class="p">(</span><span class="n">p0</span><span class="p">(),</span> <span class="n">width</span><span class="p">,</span> <span class="n">textstring</span><span class="p">)</span>
+<span class="n">mtext</span> <span class="o">=</span> <span class="n">acad</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">AddMText</span><span class="p">(</span><span class="n">p0</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">textstring</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -179,7 +179,7 @@
 <p>For drawing hatchs we need to use aDispatch.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Defining boundary.</span>
 <span class="n">outer_boundary</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">outer_boundary</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">acad</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">AddCircle</span><span class="p">(</span><span class="n">APoint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)(),</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">outer_boundary</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">acad</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">AddCircle</span><span class="p">(</span><span class="n">APoint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">1</span><span class="p">))</span>
 <span class="n">outer_boundary_dispatch</span> <span class="o">=</span> <span class="n">aDispatch</span><span class="p">(</span><span class="n">outer_boundary</span><span class="p">)</span>
 
 <span class="c1"># Creating hatch and adding boundary.</span>
@@ -192,7 +192,7 @@
 <section id="aligned-dimension">
 <h3>Aligned Dimension<a class="headerlink" href="#aligned-dimension" title="Link to this heading"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">p0</span><span class="p">,</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span> <span class="o">=</span> <span class="n">APoint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">APoint</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">APoint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">)</span>
-<span class="n">acad</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">AddDimAligned</span><span class="p">(</span><span class="n">p0</span><span class="p">(),</span> <span class="n">p1</span><span class="p">(),</span> <span class="n">p3</span><span class="p">())</span>
+<span class="n">acad</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">AddDimAligned</span><span class="p">(</span><span class="n">p0</span><span class="p">,</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>

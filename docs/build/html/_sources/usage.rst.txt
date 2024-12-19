@@ -34,7 +34,7 @@ Points
 .. code:: python
 
     p0 = APoint(2, 1)
-    point = acad.model.AddPoint(p0())
+    point = acad.model.AddPoint(p0)
 
 Lines
 ^^^^^^
@@ -42,7 +42,7 @@ Lines
 .. code:: python
 
     p0, p1 = APoint(1, 1), APoint(2, 1)
-    line = acad.model.AddLine(p0(), p1())
+    line = acad.model.AddLine(p0, p1)
 
 Polylines
 ^^^^^^^^^
@@ -61,7 +61,7 @@ Circles
 
     p0 = APoint(3, 1)
     radius = .5
-    circle = acad.model.AddCircle(p0(), radius)
+    circle = acad.model.AddCircle(p0, radius)
 
 Text
 ^^^^
@@ -71,7 +71,7 @@ Text
     p0 = APoint(0, 3)
     height = 1
     textstring = "Hello World!"
-    text = acad.model.AddText(textstring, p0(), height)
+    text = acad.model.AddText(textstring, p0, height)
 
 MultiLineText
 ^^^^^^^^^^^^^
@@ -81,7 +81,7 @@ MultiLineText
     p0 = APoint(0, 4)
     width = 1
     textstring = "This is a MText."
-    mtext = acad.model.AddMText(p0(), width, textstring)
+    mtext = acad.model.AddMText(p0, width, textstring)
 
 Hatch
 ^^^^^
@@ -92,7 +92,7 @@ For drawing hatchs we need to use aDispatch.
 
     # Defining boundary.
     outer_boundary = []
-    outer_boundary.append(acad.model.AddCircle(APoint(0, 0)(), 1))
+    outer_boundary.append(acad.model.AddCircle(APoint(0, 0), 1))
     outer_boundary_dispatch = aDispatch(outer_boundary)
 
     # Creating hatch and adding boundary.
@@ -106,7 +106,7 @@ Aligned Dimension
 .. code:: python
 
     p0, p1, p2 = APoint(0, 4), APoint(4, 4), APoint(2, 4.5)
-    acad.model.AddDimAligned(p0(), p1(), p3())
+    acad.model.AddDimAligned(p0, p1, p2)
 
 Further information about objects
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
