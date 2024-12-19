@@ -4,7 +4,7 @@ import operator
 from win32com.client import VARIANT
 
 
-class APoint:
+class APoint(VARIANT):
     """
     3D point with basic geometric operations and support for passing as a
     parameter for `AutoCAD` Automation functions.
@@ -28,6 +28,8 @@ class APoint:
         :param z: The Z coordinate of the point.
         :type z: int, float, None
         """
+        super().__init__(vt=pythoncom.VT_ARRAY | pythoncom.VT_R8, value=(x, y, z))
+
         self._x = x
         self._y = y
         self._z = z
@@ -39,6 +41,7 @@ class APoint:
     @x.setter
     def x(self, value):
         self._x = value
+        self._set_value(newval=(self._x, self.y, self.z))
 
     @property
     def y(self):
@@ -47,6 +50,7 @@ class APoint:
     @y.setter
     def y(self, value):
         self._y = value
+        self._set_value(newval=(self.x, self._y, self.z))
 
     @property
     def z(self):
@@ -55,9 +59,10 @@ class APoint:
     @z.setter
     def z(self, value):
         self._z = value
+        self._set_value(newval=(self.x, self.y, self._z))
 
     def __call__(self):
-        return win32com.client.VARIANT(pythoncom.VT_ARRAY | pythoncom.VT_R8, (self.x, self.y, self.z))
+        return self
 
     def __getitem__(self, item):
         return list(self)[item]
